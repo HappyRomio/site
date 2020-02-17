@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#242424">
+    <meta name="yandex-tableau-widget"
+        content="logo=https://res.cloudinary.com/minecraftunion/image/upload/v1558781105/tableau.png, color=#242424" />
+    <meta name="description"
+        content="Хотели когда-то окунуться в атмосферу колониального города 19 века? Или построить свою империю с нуля, чтобы потом превратить врагов в пылающие руины?">
+    <meta name="keywords"
+        content="Майнкрафт, политика, строительство города, кланвар, кланы, войны, клановые войны, города, город, нации, страны, государства, выживание, ваниль, ванильный сервер, классическое выживание, без модов, без плагинов, приватка, проходка, приватный сервер, майнкрафт ролеплей, рп, ролевая игра, ролеплей, майнкрафт юнион, майнкрафт цивилизация, майнкрафт классик, union, classic, civilization, мониторинг, сервера майнкрафт, мониторинг серверов">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/anim.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            flex-shrink: 0
+        }
+
+        html,
+        body,
+        .wrapper {
+            min-height: 100vh;
+            background-color: #242424;
+        }
+
+        .cabinet-row {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #242424;
+            position: relative;
+        }
+
+        .cabinet-btn {
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+
+        .cabinet-block img {
+            max-width: 100%;
+            flex-shrink: 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .promo-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            color: #e8ac2c;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .promo-paragraph {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            color: #e8ac2c;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .arrow {
+            color: #e8ac2c;
+            font-size: 48px;
+            margin-top: 40px;
+            animation: downarrow 1.5s infinite;
+            animation-timing-function: linear;
+        }
+
+        .image {
+            margin-bottom: 20px;
+            user-select: none;
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            html,
+            body,
+            .wrapper {
+                height: auto;
+                flex-grow: 1;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            .cabinet-row {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .cabinet-big-title {
+                margin-bottom: 20px !important;
+            }
+
+            .promo-title {
+                font-size: 28px;
+            }
+
+            .promo-paragraph {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <title>Minecraft Union | Union Access</title>
+</head>
+
+<body style="position: relative;">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <div class="push" id="push" style="display: none">
+        <div class="push-content">
+            <span>Подписка успешно приобретена</span>
+            <a href="/account/dashboard">Перейти в личный кабинет</a>
+        </div>
+        <i class="fas fa-times" id="closepush" onclick="javascript:closepush()"></i>
+    </div>
+    <header class="cabinet-header" style="z-index: 1">
+        <div class="header-wrapper">
+            <nav class="cabinet-navigation">
+                <a href="/store" class="cabinet-home-link">Minecraft Union</a>
+                <ul class="cabinet-menu">
+                    <li class="cabinet-menu-list"><a href="/rules" class="menu-list-link">Правила</a></li>
+                    <li class="cabinet-menu-list"><a href="/store" class="menu-list-link">Union Store</a></li>
+                    <li class="cabinet-menu-list"><a href="/account/dashboard" class="menu-list-link">Личный кабинет</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="cabinet-main">
+        <div class="wrapper" style="display: flex; flex-direction: column;">
+            <div class="cabinet-row wow fadeIn" style="margin-top: -60px; z-index: 0;">
+                <h2 class="promo-title">Union Access</h2>
+                <p class="promo-paragraph">
+                    Minecraft Union Access — подписка, дающая возможность игрокам окунуться в огромный мир серверов
+                    Minecraft Union, при этом получая ряд преимуществ, в отличие от обычных серверов.
+                </p>
+                <i class="arrow fas fa-arrow-down"></i>
+            </div>
+            <div class="cabinet-row server">
+                <img src="../img/storage.png" alt="Storage" class="image" ondragstart="return false;">
+                <div class="wow fadeIn">
+                    <h2 class="promo-title">Качественное оборудование</h2>
+                    <p class="promo-paragraph">
+                        Полученные средства помогают нам работать с известными и надежными компаниями в сфере
+                        предоставления
+                        выделенных серверов. Практически полностью исключены случаи падения серверов или большой
+                        задержки
+                        (пинга), даже не смотря на обилие модификаций и плагинов на довольно «тяжелом» Minecraft
+                        Roleplay.
+                    </p>
+                </div>
+            </div>
+            <div class="cabinet-row players">
+                <img src="../img/community.png" alt="Storage" class="image" ondragstart="return false;">
+                <div class="wow fadeIn">
+                    <h2 class="promo-title">Бережное отношение к игрокам</h2>
+                    <p class="promo-paragraph">
+                        В первую очередь, каждый игрок является для нас клиентом. Это неоспоримый плюс, поскольку именно
+                        к
+                        клиентам в любой сфере предоставления услуг относятся максимально внимательно и уважительно.
+                        Администрация, по факту, выполняет свою работу и получает за неё материальные блага — это
+                        стимулирует её работать максимально эффективно и находить индивидуальный подход к решению
+                        проблемы
+                        каждого игрока.
+                    </p>
+                </div>
+            </div>
+            <div class="cabinet-row features">
+                <img src="../img/net.png" alt="Storage" class="image" ondragstart="return false;">
+                <div class="wow fadeIn">
+                    <h2 class="promo-title">Удобные и функциональные ресурсы</h2>
+                    <p class="promo-paragraph">
+                        Даже самые популярные майнкрафт-проекты не могут похвастаться обилием вспомогательных ресурсов,
+                        тем
+                        более выполненных на таком уровне. Для каждой задачи был нанят разработчик, чётко знающий все
+                        тонкости своей сферы. Тестированию были уделены недели, составлены десятки баг-репортов —
+                        гарантия
+                        надежности, наши приоритеты.
+                    </p>
+                </div>
+            </div>
+            <div class="cabinet-row donatefree">
+                <img src="../img/hand.png" alt="Storage" class="image" ondragstart="return false;">
+                <div class="wow fadeIn">
+                    <h2 class="promo-title">Отсутствие доната</h2>
+                    <p class="promo-paragraph" style="margin-bottom: 40px;">
+                        Отсутствие внутри-игровых приобретений убирает из игры дисбаланс, созданный «имбовыми»
+                        предметами,
+                        которые доступны только за деньги. В нашем случае все достижения являются плодами созидания
+                        самих
+                        игроков, а не их кошельков.
+                    </p>
+                    <a href="/store" class="cabinet-btn">Перейти в магазин</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            PopUpHide();
+        });
+
+        function closepush() {
+            $("#push").hide();
+        }
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(53870005, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/53870005" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

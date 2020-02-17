@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru-RU" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet">
+	<title>Minecraft Union Store</title>
+</head>
+<body>
+	<header class="main-header">
+		<div class="logo">
+			<a href="../store" class="logo-link">Minecraft Union</a>
+		</div>
+		<nav class="categories">
+			<ul class="cat-list">
+				<li class="list"><a href="donate" class="cat-link checked" th:text = "${balance}"><i style="margin-left: 10px;" class="fas fa-plus-circle"></i></a></li><!-- Вывод баланса -->
+			</ul>
+		</nav>
+	</header>
+	<main class="site-main donate-main" style="padding:10px; justify-content: center; align-items: center;">
+	  <div class="form">
+	  	<form class="flex-form" action="donate.php" method="post" name="donate">
+	  		<h1 class="form-title">Пополнение счета</h1>
+	  		<input class="input" type="number" name="UID" placeholder="UID">
+	  		<input class="input" type="number" name="money" placeholder="Сумма (в рублях)">
+	  		<input class="submit" type="submit" name="submit" value="Пополнить">
+	  	</form>
+	  </div>
+	</main>
+</body>
+</html>

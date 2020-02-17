@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#242424">
+    <meta name="robots" content="noindex">
+    <meta name="yandex-tableau-widget"
+        content="logo=https://res.cloudinary.com/minecraftunion/image/upload/v1558781105/tableau.png, color=#242424" />
+    <meta name="description"
+        content="Хотели когда-то окунуться в атмосферу колониального города 19 века? Или построить свою империю с нуля, чтобы потом превратить врагов в пылающие руины?">
+    <meta name="keywords"
+        content="Майнкрафт, политика, строительство города, кланвар, кланы, войны, клановые войны, города, город, нации, страны, государства, выживание, ваниль, ванильный сервер, классическое выживание, без модов, без плагинов, приватка, проходка, приватный сервер, майнкрафт ролеплей, рп, ролевая игра, ролеплей, майнкрафт юнион, майнкрафт цивилизация, майнкрафт классик, union, classic, civilization, мониторинг, сервера майнкрафт, мониторинг серверов">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Minecraft Union | Личный кабинет</title>
+</head>
+
+<body>
+    <header class="cabinet-header">
+        <div class="header-wrapper">
+            <nav class="cabinet-navigation">
+                <a href="/" class="cabinet-home-link">Minecraft Union</a>
+                <ul class="cabinet-menu">
+                    <li class="cabinet-menu-list"><a href="/rules" class="menu-list-link">Правила</a></li>
+                    <li class="cabinet-menu-list"><a href="/store" class="menu-list-link">Union Store</a></li>
+                    <li class="cabinet-menu-list"><a href="/account/dashboard" class="menu-list-link">Личный кабинет</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="cabinet-main">
+        <div class="wrapper" style="display: flex; flex-direction: column;">
+            <h1 class="cabinet-big-title">Личный кабинет</h1>
+            <div class="cabinet-row">
+                <div class="cabinet-block">
+                    <h2 class="cabinet-block-title">Информация об аккаунте</h2>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">Никнейм</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${user.getUserName()}"></span></span>
+                        </span>
+                    </div>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">UID</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${user.getUserId()}"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">E-Mail</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${user.getEmail()}"> </span></span>
+                        </span>
+                    </div>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">Баланс</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${user.getCredits()}"></span>
+                                <span>MC</span></span>
+                        </span>
+                    </div>
+                    <h2 class="cabinet-block-title">Настройки аккаунта</h2>
+                    <div class="cabinet-block-account-settings">
+                        <div class="cabinet-row buttons-row">
+                            <a class="cabinet-btn" href="../account/passwordchange">Изменить пароль</a>
+                            <a class="cabinet-btn" href="../account/emailchange">Изменить E-Mail</a>
+                        </div>
+                        <a class="cabinet-btn"
+                            style="width: 100%; margin-left: 0; height: 64px; margin-bottom: 0; flex-shrink: 0;"
+                            href="../logout">Выйти
+                            из
+                            аккаунта</a>
+                    </div>
+
+                </div>
+                <div class="cabinet-block">
+                    <h2 class="cabinet-block-title">Union Access</h2>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">Тип подписки</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${user.getSubscriptionType()}"> </span></span>
+                        </span>
+                    </div>
+                    <div class="cabinet-block-option-row">
+                        <span class="cabinet-block-option">
+                            <span class="option-name">Статус подписки</span>
+                            <div class="line"></div>
+                            <span class="option-value"><span th:text="${status}"> </span></span>
+                        </span>
+                    </div>
+
+
+
+                    <div class="cabinet-block-option-row" th:with="expr_result = ${user.getSubscription()}">
+                        <div th:if="${expr_result}">
+                            <span class="cabinet-block-option">
+                                <span class="option-name">Срок действия</span>
+                                <div class="line"></div>
+                                <span class="option-value"><span th:text="${date}"> </span></span>
+                            </span>
+                        </div>
+
+                        <div th:unless="${expr_result}">
+                            <span class="cabinet-block-option">
+                                <span class="option-name">Срок действия</span>
+                                <div class="line"></div>
+                                <span class="option-value"></span>
+                            </span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="/promo" class="cabinet-btn" style="margin: auto 0 0 0; width: 100%;">Больше о Union
+                        Access</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(53870005, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/53870005" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

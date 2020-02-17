@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+}
+
+.slick-list,
+.slick-track {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__item span {
+  margin: auto;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.first {
+  color: #fff;
+}
+
+.second {
+  color: #fff;
+}
+
+.third {
+  color: #fff;
+}
+
+.desc {
+  font-size: .5em;
+  margin-top: 15px;
+}
+
+.slide-video {
+   position:fixed;
+   z-index:-1;
+   overflow:hidden;
+   width: 14.31%;
+}
+
+.start-game {
+  font-size: .6em;
+  color: #fff;
+  margin-top: 30px;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s;
+}
+
+.start-game:hover {
+  transition: 0.2s;
+  background-color: #fff;
+  color: #141414;
+}
+
+@media screen and (max-width: 576px) {
+  .slide-video {
+    width: 43%;
+  }
+}

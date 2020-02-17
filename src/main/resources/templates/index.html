@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0">
+  <meta name="yandex-tableau-widget"
+    content="logo=https://res.cloudinary.com/minecraftunion/image/upload/v1558781105/tableau.png, color=#242424" />
+  <meta name="description"
+    content="Хотели когда-то окунуться в атмосферу колониального города 19 века? Или построить свою империю с нуля, чтобы потом превратить врагов в пылающие руины?">
+  <meta name="keywords"
+    content="Майнкрафт, политика, строительство города, кланвар, кланы, войны, клановые войны, города, город, нации, страны, государства, выживание, ваниль, ванильный сервер, классическое выживание, без модов, без плагинов, приватка, проходка, приватный сервер, майнкрафт ролеплей, рп, ролевая игра, ролеплей, майнкрафт юнион, майнкрафт цивилизация, майнкрафт классик, union, classic, civilization, мониторинг, сервера майнкрафт, мониторинг серверов">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/service.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <title>Minecraft Union</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="#" class="logo-link">Minecraft Union</a>
+    </div>
+    <nav class="main-menu">
+      <ul class="menu-list">
+        <li><a href="../store" class="menu-link">Union Store</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="slider">
+    <article class="slider__item first">
+      <span>
+        Minecraft Roleplay
+        <p class="desc">Романтика Нового Петербурга</p>
+        <a href="/account/login" class="start-game">Начать игру</a>
+        <video class="slide-video" autoplay loop muted>
+          <source src="../video/slide1.mp4" type="video/mp4">
+        </video>
+      </span>
+    </article>
+    <article class="slider__item second"><span>Minecraft Civilization<p class="desc">Твой тоталитарный городок</p><a
+          href="/account/login" class="start-game">Начать игру</a>
+        <video class="slide-video" autoplay loop muted>
+          <source src="../video/slide2.mp4" type="video/mp4">
+        </video></span></article>
+    <article class="slider__item third"><span>Minecraft Classic<p class="desc">Сила в простоте</p><a
+          href="/account/login" class="start-game">Начать игру</a>
+        <video class="slide-video" autoplay loop muted>
+          <source src="../video/slide3.mp4" type="video/mp4">
+        </video></span></article>
+  </section>
+  <script>
+    $(function () {
+      $('.slider').slick({
+        arrows: false
+      });
+
+      $('.slider').mousewheel(function (e) {
+        if (e.deltaY !== 1) {
+          $('.slider').slick('slickNext');
+        } else {
+          $('.slider').slick('slickPrev');
+        }
+
+        e.preventDefault();
+      });
+    });
+  </script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(53870005, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/53870005" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
